@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "default": "folderly-site"
+  },
+  "targets": {
+    "folderly-site": {
+      "hosting": {
+        "development": [
+          "folderly-site-dev"
+        ],
+        "production": [
+          "folderly-site"
+        ]
+      }
+    }
+  }
+}

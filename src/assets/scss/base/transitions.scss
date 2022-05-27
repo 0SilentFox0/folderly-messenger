@@ -1,0 +1,239 @@
+@import '../mixins';
+@import '../variables';
+
+.page-enter-active,
+.page-leave-active {
+  transition: opacity 0.5s;
+}
+
+.page-enter,
+.page-leave-to {
+  opacity: 0;
+}
+
+@include media(tablet) {
+  .page-enter-active,
+  .page-leave-active {
+    transition: none;
+  }
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.fade-in {
+  &-enter-active,
+  &-leave-active {
+    transition: all 0.4s ease-in-out;
+  }
+
+  &-enter-from {
+    transform: translateY(0);
+    opacity: 0;
+  }
+
+  &-enter-to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-leave-from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  &-leave-to {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+}
+
+.slide {
+  &-enter-from,
+  &-leave-to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+
+  &-leave-from,
+  &-enter-to {
+    opacity: 1;
+  }
+
+  &-enter-active,
+  &-leave-active {
+    transition: all ease 0.3s;
+  }
+}
+
+// .slide-next-enter-active,
+// .slide-next-leave-active,
+// .slide-prev-enter-active,
+// .slide-prev-leave-active {
+//   transition: transform $transition-speed-slower
+//     cubic-bezier(0.785, 0.135, 0.15, 0.86);
+// }
+// .slide-prev-leave-to,
+// .slide-next-enter {
+//   position: absolute;
+
+//   width: 100%;
+
+//   transform: translate3d(-100%, 0, 0);
+// }
+// .slide-prev-enter,
+// .slide-next-leave-to {
+//   position: absolute;
+
+//   width: 100%;
+
+//   transform: translate3d(100%, 0, 0);
+// }
+
+// .slide-down-enter-active,
+// .slide-down-leave-active,
+// .slide-up-enter-active,
+// .slide-up-leave-active {
+//   transition: transform $transition-speed-slower
+//     cubic-bezier(0.785, 0.135, 0.15, 0.86);
+// }
+// .slide-up-leave-to,
+// .slide-down-enter {
+//   position: absolute;
+
+//   height: 100%;
+
+//   transform: translate3d(0, -100%, 0);
+// }
+// .slide-up-enter,
+// .slide-down-leave-to {
+//   position: absolute;
+
+//   height: 100%;
+
+//   transform: translate3d(0, 100%, 0);
+// }
+
+// .slide-enter-active {
+//   transition: $transition-speed-slow 0.3s ease;
+// }
+// .slide-leave-active {
+//   transition: $transition-speed-slow 0.3s ease;
+//   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+// }
+// .slide-enter-to,
+// .slide-leave {
+//   max-height: 100px;
+//   overflow: hidden;
+// }
+// .slide-enter,
+// .slide-leave-to {
+//   max-height: 0;
+//   overflow: hidden;
+// }
+
+// .scroll-before-enter {
+//   -webkit-transform: translateY(50px);
+//   transform: translateY(50px);
+//   opacity: 0;
+
+//   transition: 0.5s ease-in;
+// }
+// .scroll-enter {
+//   transform: matrix(1, 0, 0, 1, 0, 0);
+//   opacity: 1;
+// }
+// .s3-enter-active,
+// .list-leave-active {
+//   transition: all 1s;
+// }
+
+// .s3-leave-to {
+//   position: absolute;
+
+//   transform: translateX(30px);
+//   opacity: 0;
+// }
+
+// .s3-enter {
+//   transform: translateX(-30px);
+//   opacity: 0;
+// }
+// .s3-enter-active,
+// .s3-leave-active {
+//   transition: all 1s;
+// }
+
+// .list-leave-to {
+//   position: absolute;
+
+//   transform: translateY(30px);
+//   opacity: 0;
+// }
+
+// .list-enter {
+//   position: absolute;
+
+//   transform: translateY(-30px);
+//   opacity: 0;
+// }
+//
+//.dropdown-fade {
+//  &-enter-from,
+//  &-leave-to {
+//    transform: translateY(20px);
+//    opacity: 0;
+//  }
+//
+//  &-enter-to,
+//  &-leave-from {
+//    transform: translateY(0);
+//    opacity: 1;
+//  }
+//
+//  &-enter-active,
+//  &-leave-active {
+//    transition: opacity 0.2s ease, transform 0.4s ease, height 0.4s;
+//  }
+//}
+
+// @keyframes pulse {
+//   0% {
+//     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
+//     transform: scale(0.95);
+//   }
+
+//   70% {
+//     box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+//     transform: scale(1);
+//   }
+
+//   100% {
+//     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+//     transform: scale(0.95);
+//   }
+// }
+
+// .accordion-enter-active,
+// .accordion-leave-active {
+//   transition: max-height 0.3s;
+// }
+
+// .accordion-enter-to,
+// .accordion-leave {
+//   max-height: 100px;
+//   overflow: hidden;
+// }
+
+// .accordion-enter,
+// .accordion-leave-to {
+//   max-height: 0;
+//   overflow: hidden;
+// }

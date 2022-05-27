@@ -1,0 +1,66 @@
+stages:
+  - Review-Build
+  - Review-After-Build
+  - Production
+  - Cleaning
+
+Review:
+  stage: Review-Build
+  image: node:latest
+  only: [merge_requests]
+  before_script:
+    - yarn global add firebase-tools
+  script:
+    - yarn install
+    - yarn run generate
+    - firebase hosting:channel:deploy $CI_COMMIT_REF_SLUG --token $FIREBASE_TOKEN
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    url: $MY_DEPLOYED_URL
+
+after-branch-build:
+  stage: Review-After-Build
+  image: andreysenov/firebase-tools:latest
+  only: [merge_requests]
+  script:
+    - node ./prebuild.mjs
+    - cat build.env
+  artifacts:
+    reports:
+      dotenv: build.env
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    url: $MY_DEPLOYED_URL
+    on_stop: Cleaning
+
+Cleaning:
+  stage: Cleaning
+  image: node:latest
+  only: [merge_requests]
+  when: manual
+  before_script:
+    - yarn global add firebase-tools
+  script:
+    - firebase hosting:channel:delete -f $CI_COMMIT_REF_SLUG --token $FIREBASE_TOKEN
+  environment:
+    name: review/$CI_COMMIT_REF_NAME
+    action: stop
+
+Rollout:
+  stage: Production
+  image: node:latest
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "master" && $CI_PIPELINE_SOURCE != "trigger"'
+      when: manual
+    - if: '$CI_COMMIT_REF_NAME == "master" && $CI_PIPELINE_SOURCE == "trigger"'
+      when: always
+  before_script:
+    - yarn global add firebase-tools
+  script:
+    - yarn install
+    - yarn run generate
+    - firebase deploy --only hosting --token $FIREBASE_TOKEN
+  environment:
+    name: production
+    url: https://folderly.com
+    action: start

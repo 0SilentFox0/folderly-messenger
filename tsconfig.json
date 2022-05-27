@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
+    "sourceMap": true,
+    "resolveJsonModule": true,
+    "lib": ["esnext", "dom"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "types": [
+      "vite-plugin-vue-layouts/client",
+      "vite-plugin-pages/client",
+      "vite/client"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true
+  },
+  "include": ["**/*.ts", "src/**/*.d.ts", "src/**/*.vue", "prerender.ts"]
+}

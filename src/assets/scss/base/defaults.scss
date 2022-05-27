@@ -1,0 +1,45 @@
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html,
+body {
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+input,
+button {
+  box-sizing: border-box;
+
+  font-family: 'Inter', sans-serif;
+
+  border: unset;
+  outline: none;
+}
+
+a {
+  color: unset;
+  text-decoration: none;
+
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+ol,
+ul {
+  padding: 0;
+
+  list-style: none;
+}
