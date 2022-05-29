@@ -1,5 +1,7 @@
 <template>
   <div class="default-layout">
+    <TheHeader v-once />
+
     <div class="layout-content">
       <router-view v-slot="{ Component, route }">
         <template v-if="Component">
@@ -19,12 +21,12 @@
 import { defineComponent } from 'vue';
 
 import { setUtmParamsToSession } from '@/utils/utm';
-
+import TheHeader from '@/components/pages/index/TheHeader.vue';
 import { useCommonStore } from '@/store/common';
 
 export default defineComponent({
   name: 'DefaultLayout',
-  components: {},
+  components: { TheHeader },
 
   setup() {
     const commonStore = useCommonStore();

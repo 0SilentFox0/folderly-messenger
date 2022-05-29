@@ -132,8 +132,6 @@ export default defineComponent({
   height: 1px;
 
   background-color: $color-disabled-background;
-  box-shadow: 0px 2px 8px rgba(0, 49, 141, 0.05),
-    0px 1px 0px rgba(0, 32, 92, 0.05);
 
   @include media(tablet) {
     display: none;
