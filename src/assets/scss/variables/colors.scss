@@ -1,4 +1,107 @@
-// Colors
+// new
+
+//Background
+
+$color-background-primary: #ffffff;
+$color-background-secondary: #f8f9fc;
+$color-background-tertiary: #eff2fa;
+$color-background-accent-dark: #144cb8;
+$color-background-accent: #f5f8fe;
+$color-background-accent-light: #f5f8ff;
+$color-background-accent-secondary-light: #e6eefe;
+$color-background-primary-inverse: #1b2132;
+$color-background-secondary-inverse: #262d40;
+
+//Button
+
+$color-button-primary: #195ee6;
+$color-button-primary-hover: #2f6ee9;
+$color-button-primary-pressed: #1755cf;
+
+$color-button-secondary: #e6eefe;
+$color-button-secondary-hover: #d3e1fd;
+$color-button-secondary-pressed: #b5cdfd;
+
+$color-button-tertiary: #ffffff;
+$color-button-tertiary-hover: #d3e1fd;
+$color-button-tertiary-pressed: #b5cdfd;
+
+$color-button-secondary-inverse: rgba(115, 122, 140, 0.32);
+$color-button-secondary-inverse-hover: rgba(115, 122, 140, 0.52);
+$color-button-secondary-inverse-pressed: rgba(115, 122, 140, 0.4);
+
+//Text
+
+$color-text-heading: #14171f;
+$color-text-primary: #262d40;
+$color-text-secondary: #5b6171;
+$color-text-tertiary: #8c93a6;
+$color-text-quaternary: #a7adbe;
+$color-text-accent: #f5f8fe;
+$color-text-primary-inverse: #fff;
+$color-text-secondary-inverse: #eaedf6;
+$color-text-tertiary-inverse: #dfe3ec;
+
+//Link
+
+$color-link-primary: #f5f8fe;
+$color-link-primary-hover: #457eed;
+$color-link-primary-inverse: #87adf7;
+$color-link-primary-inverse-hover: #fff;
+$color-link-secondary: #5b6171;
+$color-link-secondary-icon: #8c93a6;
+$color-link-secondary-hover: #195ee6;
+
+//Form
+
+$color-form-border: #dfe3ec;
+$color-form-border-hover: #c4c8d4;
+$color-form-border-active: #b5cdfd;
+$color-form-bg: #fff;
+$color-form-active-label: #f5f8fe;
+$color-form-selection-bg: #eaedf6;
+$color-form-selection-tab-bg: #fff;
+
+//Interaction
+
+$color-interaction-primary: #195ee6;
+$color-interaction-primary-hover: #2f6ee9;
+$color-interaction-primary-active: #1755cf;
+$color-interaction-secondary: #e6eefe;
+$color-interaction-secondary-hover: #d3e1fd;
+$color-interaction-secondary-active: #b5cdfd;
+$color-interaction-tertiary: #fff;
+$color-interaction-tertiary-hover: #d3e1fd;
+$color-interaction-tertiary-active: #b5cdfd;
+$color-interaction-secondary-inverse: rgba(115, 122, 140, 0.32);
+$color-interaction-secondary-inverse-active: rgba(115, 122, 140, 0.4);
+$color-interaction-secondary-inverse-hover: rgba(115, 122, 140, 0.52);
+
+//Support
+
+$color-support-error-light: #ffebec;
+$color-support-error: #df3a44;
+$color-support-error-border: #f38b91;
+$color-support-success-light: #dcf4e8;
+$color-support-success: #00994c;
+$color-support-success-border: #55ce91;
+$color-support-secondary-light: #eaedf6;
+$color-support-secondary: #5b6171;
+$color-support-primary-light: #e6eefe;
+$color-support-primary: #195ee6;
+$color-support-secondary-inverse-light: rgba(115, 122, 140, 0.32);
+$color-support-secondary-inverse: #fff;
+
+//Divider
+
+$color-divider-primary: rgba(115, 122, 140, 0.1);
+$color-divider-primary-inverse: rgba(255, 255, 255, 0.08);
+
+//Overlay
+
+$color-overlay: rgba(20, 23, 31, 0.8);
+
+// Colors old
 $color-article-text: #454b57;
 
 $color-providers-border-dark: #364661;
@@ -10,6 +113,8 @@ $color-text-gray-lighter: #8287a6;
 $color-info: $color-text-gray;
 $color-info-hover: #8388a7;
 $color-info-active: #595c72;
+$color-text-primary: #262d40;
+$color-text-secondary: #5b6171;
 
 $color-white: #fff;
 
@@ -30,17 +135,26 @@ $color-gray-silver: #bcc4d1;
 $color-gray-warm-dark: #303030;
 $color-gray-medium-dark: #727b89;
 $color-gray-dark: #303744;
+$color-gray-background: #f8f9fc;
 $color-disabled-background: #edf2fa;
+$color-gray-accent-light: #f5f8ff;
 
-$color-primary: #2968c8;
+// $color-primary: #2968c8;
+$color-primary: #195ee6;
 $color-primary-hover: #3a81ea;
 
-$color-blue: #2968c8;
+// $color-blue: #2968c8;
+$color-blue: #195ee6;
+
 $color-blue-bg: #fafcff;
 $color-blue-bg-dark: #f3f8ff;
 $color-blue-light: #ddebff;
 $color-blue-medium: #accdff;
 $color-blue-gray: #78a6ec;
+$color-blue-additional: #242c42;
+$color-blue-hover: #d3e1fd;
+$color-blue-pressed: #b5cdfd;
+$color-blue-percentage: #195ee6;
 
 $color-blue-dark: #24559e;
 $color-blue-accent: #408cff;
