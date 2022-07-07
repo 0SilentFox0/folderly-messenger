@@ -8,16 +8,19 @@
           height="348"
           :image-default="img.default"
           :image-webp="img.webp" />
-        <div class="title"><span class="blue">Folderly</span> Messenger</div>
+        <div class="title">
+          <span class="blue">Folderly</span>Chat Messenger
+        </div>
         <div class="text">
-          Fast and secure desktop app, perfectly synced with your mobile phone.
+          Manage email contacts faster. Learn your prospects better. Make every
+          conversation fun.
         </div>
         <VButton
           class="button"
           justify="space-between"
           size="large"
           icon-right="arrow-right">
-          Get Folderly Messenger
+          Get Folderly Messenger for Free
         </VButton>
 
         <div class="text">

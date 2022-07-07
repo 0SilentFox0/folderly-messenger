@@ -101,7 +101,6 @@ export default defineComponent({
 .head-icon {
   margin-left: 10px;
 
-  transform: rotate(90deg);
 
   transition: 0.15s ease-in-out;
 }
@@ -192,7 +191,7 @@ export default defineComponent({
     padding-bottom: 30px;
 
     .head-icon {
-      transform: rotate(270deg);
+      transform: rotate(180deg);
     }
   }
 }
